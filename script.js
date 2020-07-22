@@ -86,18 +86,18 @@ class Person {
 
 }
 
-const brzemeg = new Person("Brzemeg", 'Vagene', 31, 'Beniz', ['music', 'movies', 'sport'])
-const beniz = new Person("Beniz", 'xD', 21, 'Nope', ['xd', 'ds', 'a']);
+const user1 = new Person("Joe", 'Doe', 31, 'NYC', ['music', 'movies', 'sport'])
+const user2 = new Person("Dan", 'Bam', 21, 'Chicago', ['cheese', 'nuts', 'salt']);
 
-const vagene = new Object();
+const user3 = new Object();
 
-vagene.name = "Beniz";
-vagene.age = 11;
-vagene.sayHello = function () {
+user3.name = "Beniz";
+user3.age = 11;
+user3.sayHello = function () {
   console.log(`Hi there, I am ${this.name} and ${this.age} y.o.`)
 }
 
-const pasiej = Object.create(brzemeg)
+const user4 = Object.create(user1)
 
 Person.prototype.sayBye = function () {
   console.log(`Person ${this.name.first} has left the office`)
@@ -124,7 +124,7 @@ class Teacher extends Person {
   }
 }
 
-const bio = new Teacher('Pani', 'Gienia', 54, "Lublin", ["bio", "diesl"], 'Biology')
+const bio = new Teacher('Alice', 'Moose', 54, "Lublin", ["bio", "diesl"], 'Biology')
 
 function createUser(name, age) {
   return {
@@ -137,7 +137,7 @@ function createUser(name, age) {
   }
 }
 
-const padlina = createUser('Beniz', 17)
+const user5 = createUser('Bart', 17)
 
 class Student extends Teacher {
   constructor(first, last, age, city, hobby, subiect, classGroup) {
